@@ -1,0 +1,32 @@
+<div class="container-info-back">
+    <script src="Scripts/spa-sql-data.js"></script> 
+
+	<p align="center">База знаний</p>
+    <div class="container-info">
+    	
+    	<ul class="datalist-info unselectable">
+    		<form method="post" class="info-item-form"><li>Страны</li></form>
+    		<form method="post" class="info-item-form"><li>Достопримечательности</li></form>
+    		<form method="post" class="info-item-form"><li>Организации</li></form>
+    		<form method="post" class="info-item-form"><li>Сайты</li></form>
+    		<form method="post" class="info-item-form"><li>Стримеры</li></form>
+    		<form method="post" class="info-item-form"><li>Бренды</li></form>
+    		<form method="post" class="info-item-form"><li>Крупные города</li></form>
+    		<form method="post" class="info-item-form"><li>Языки</li></form>
+    		<form method="post" class="info-item-form"><li>Религии</li></form>
+    		<form method="post" class="info-item-form"><li>Праздники</li></form>
+    		<form method="post" class="info-item-form"><li>Группы</li></form>
+    		<form method="post" class="info-item-form"><li>Артисты</li></form>
+    		<form method="post" class="info-item-form"><li>Игры</li></form>
+    		<form method="post" class="info-item-form"><li>Экономика</li></form>
+    		<form method="post" class="info-item-form"><li>Интересные факты</li></form>
+    		<form method="post" class="info-item-form"><li>Кино</li></form>
+    		<form method="post" class="info-item-form"><li>Музыка</li></form>
+    		<form method="post" class="info-item-form"><li>Деньги</li></form>
+    		<form method="post" class="info-item-form"><li>Легенды</li></form>
+    		<form method="post" class="info-item-form"><li>Киберспорт</li></form>
+    	</ul>
+
+	</div>
+
+</div>

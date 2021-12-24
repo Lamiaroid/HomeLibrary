@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Регистрация</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="/Arts/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/Arts/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+	<div class="content-container">
+		<div class="content">
+			<form id="registration-form" name="DifficultyChoose" action="/game/start" method="GET" autocomplete="off">
+				<h2 align="center">Имя</h2>
+				<input name="FirstName" type="text" class="content-container user-info" required pattern="^[A-Za-zА-Яа-я]{1,25}$" title="Возможные символы: a-z, A-Z, а-я, А-Я (Не более 25)"><br>
+				<h2 align="center">Фамилия</h2>
+				<input name="LastName" type="text" class="content-container user-info" required pattern="^[A-Za-zА-Яа-я]{1,25}$" title="Возможные символы: a-z, A-Z, а-я, А-Я (Не более 25)"><br>
+				<h2 align="center">Email</h2>
+				<input name="Email" type="email" class="content-container user-info" required pattern="^.{1,30}@(mail.ru|web.de|live.jp|gmail.com|tut.by|rambler.ru)$" title="Возможные почты: mail.ru, web.de, live.jp, gmail.com, tut.by, rambler.ru (Не более 30 символов)"><br><br>
+				<h2 align="center">Сложность</h2>
+				<div class="difficulty-container">
+					<div class="difficulty-block"><input type="submit" class="content-container button difficulty-button" value="Easy" name="Difficulty"></div>
+					<div class="difficulty-block"><input type="submit" class="content-container button difficulty-button" value="Medium" name="Difficulty"></div>
+					<div class="difficulty-block"><input type="submit" class="content-container button difficulty-button" value="Hard" name="Difficulty"></div>
+				</div>
+			</form>	
+			<form action="/game" method="post">
+				<button class="content-container button" id="oh-no-go-back">Я передумал</button>
+			</form>
+		</div>
+	</div>
+
+</body>

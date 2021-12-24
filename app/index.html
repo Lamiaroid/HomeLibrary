@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Развлекательный проект</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="Styles/style.css" />
+        <link rel="icon" href="/Arts/favicon.ico" type="image/x-icon" />
+        <link
+            rel="shortcut icon"
+            href="/Arts/favicon.ico"
+            type="image/x-icon"
+        />
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="socket.io-file-client.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="Scripts/panel-popup.js"></script>
+        <script src="Scripts/theme-switcher.js"></script>
+        <script src="Scripts/spa.js"></script>
+        <script src="Scripts/initialization.js"></script>
+    </head>
+    <body>
+        <video class="bg" width="1920" height="1080" autoplay muted loop>
+            <source
+                src="bg-anim.webm"
+                type='video/webm; codecs="vp8, vorbis"'
+            />
+        </video>
+
+        <div class="panel">
+            <div class="panel-content">
+                <p class="panel-text">Меню</p>
+                <form method="post" class="homepage-form">
+                    <button class="homepage-button">На главную</button>
+                </form>
+                <form method="post" class="chatroom-form">
+                    <button class="chat-button">Чат</button>
+                </form>
+                <form method="post" class="about-form">
+                    <button class="about-button">О проекте</button>
+                </form>
+                <form method="post" class="bot-form">
+                    <button class="bot-button">Бот</button>
+                </form>
+                <form method="post" class="info-form">
+                    <button class="info-button">Разное</button>
+                </form>
+                <form action="/game" method="post">
+                    <button class="game-button">Игра</button>
+                </form>
+                <form
+                    action="/under-construction"
+                    method="post"
+                    class="under-construction-form"
+                >
+                    <button class="under-construction-button">Скоро...</button>
+                </form>
+                <form action="/logout" method="post">
+                    <button class="logout-button">Выйти из аккаунта</button>
+                </form>
+                <div class="theme">
+                    <span class="theme-text-left">Тёмная</span>
+                    <span class="theme-text-right">Синяя</span>
+                    <label class="switch">
+                        <input
+                            id="theme-switcher"
+                            type="checkbox"
+                            checked="checked"
+                        />
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="panel-activator">
+                <img
+                    class="panel-image unselectable"
+                    src="/Arts/menu-icon.png"
+                />
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="item">
+                <form
+                    action="/game"
+                    method="post"
+                    enctype="multipart/form-data"
+                    id="game-form"
+                >
+                    <a
+                        href="javascript:;"
+                        class="menu-item unselectable"
+                        onclick="document.getElementById('game-form').submit();"
+                    >
+                        <img src="Ico/game_ico.png" />
+                        <p class="text" id="text-game">Игра</p>
+                    </a>
+                </form>
+            </div>
+
+            <div class="item">
+                <form method="post" class="chatroom-form" id="chatroom-form">
+                    <div class="menu-item unselectable">
+                        <img src="Ico/chat_ico.png" />
+                        <p class="text" id="text-chat">Чат</p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="item">
+                <form method="post" class="about-form" id="about-form">
+                    <div class="menu-item unselectable">
+                        <img src="Ico/about_ico.png" />
+                        <p class="text" id="text-about">О проекте</p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="item">
+                <form method="post" class="bot-form" id="bot-form">
+                    <div class="menu-item unselectable">
+                        <img src="Ico/bot_ico.png" />
+                        <p class="text" id="text-bot">Бот</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

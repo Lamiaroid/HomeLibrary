@@ -1,0 +1,234 @@
+$(function() {  
+    $(".about-form").on('click', function(wind) {   
+        wind.preventDefault();
+        $.post('/about', function(data) {
+            $(".container").remove();
+            $(".container-chat-back").remove();
+            $(".about").remove();
+            $(".bot-living-area").remove(); 
+            $(".container-info-back").remove();
+            $("body").append(data);
+            switchThemeIfNeed();
+        })
+        .fail(function(xhr, status, error) {
+            if (error === "Unauthorized") {
+                $("body").append(`<form action="/auth" method="post" id="get-away"></form>`);
+                $("#get-away").submit();
+            }
+        });        
+    });    
+
+    $(".homepage-form").on('click', function(wind) {   
+        wind.preventDefault();
+        $.post('/homX', function(data) {
+            $(".container").remove();
+            $(".container-chat-back").remove();
+            $(".about").remove();
+            $(".bot-living-area").remove(); 
+            $(".container-info-back").remove();
+            $("body").append(data);
+            switchThemeIfNeed();
+
+            // Adding listeners to elements, cause now they don't have them (as they were renewed)
+            // Renewing Zone //
+            $("#chatroom-form").on("click", function(wind) {   
+                wind.preventDefault();
+                $.post('/chatroom', function(data) {
+                    $(".container").remove();
+                    $(".container-chat-back").remove();
+                    $(".about").remove();   
+                    $(".bot-living-area").remove(); 
+                    $(".container-info-back").remove();
+                    $("body").append(data);
+                    switchThemeIfNeed();
+                })
+                .fail(function(xhr, status, error) {
+                    if (error === "Unauthorized") {
+                        $("body").append(`<form action="/auth" method="post" id="get-away"></form>`);
+                        $("#get-away").submit();
+                    }
+                });        
+            });  
+
+            $("#bot-form").on("click", function(wind) {   
+                wind.preventDefault();
+                $.post('/bot', function(data) {
+                    $(".container").remove();
+                    $(".container-chat-back").remove();
+                    $(".about").remove();   
+                    $(".bot-living-area").remove();   
+                    $(".container-info-back").remove();
+                    $("body").append(data);
+                    switchThemeIfNeed();
+                })
+                .fail(function(xhr, status, error) {
+                    if (error === "Unauthorized") {
+                        $("body").append(`<form action="/auth" method="post" id="get-away"></form>`);
+                        $("#get-away").submit();
+                    }
+                });        
+            });         
+
+            $("#about-form").on('click', function(wind) {   
+                wind.preventDefault();
+                $.post('/about', function(data) {
+                    $(".container").remove();
+                    $(".container-chat-back").remove();
+                    $(".about").remove();
+                    $(".bot-living-area").remove(); 
+                    $(".container-info-back").remove();
+                    $("body").append(data);
+                    switchThemeIfNeed();
+                })
+                .fail(function(xhr, status, error) {
+                    if (error === "Unauthorized") {
+                        $("body").append(`<form action="/auth" method="post" id="get-away"></form>`);
+                        $("#get-away").submit();
+                    }
+                });        
+            });   
+            // Renewing Zone //
+        })
+        .fail(function(xhr, status, error) {
+            if (error === "Unauthorized") {
+                $("body").append(`<form action="/auth" method="post" id="get-away"></form>`);
+                $("#get-away").submit();
+            }
+        });        
+    }); 
+
+    $(".chatroom-form").on("click", function(wind) {   
+        wind.preventDefault();
+        $.post('/chatroom', function(data) {
+            $(".container").remove();
+            $(".container-chat-back").remove();
+            $(".about").remove();   
+            $(".bot-living-area").remove(); 
+            $(".container-info-back").remove();
+            $("body").append(data);
+            switchThemeIfNeed();
+        })
+        .fail(function(xhr, status, error) {
+            if (error === "Unauthorized") {
+                $("body").append(`<form action="/auth" method="post" id="get-away"></form>`);
+                $("#get-away").submit();
+            }
+        });        
+    }); 
+
+    $(".info-form").on("click", function(wind) {   
+        wind.preventDefault();
+        $.post('/info', function(data) {
+            $(".container").remove();
+            $(".container-chat-back").remove();
+            $(".about").remove();   
+            $(".bot-living-area").remove(); 
+            $(".container-info-back").remove();
+            $("body").append(data);
+            switchThemeIfNeed();
+        })
+        .fail(function(xhr, status, error) {
+            if (error === "Unauthorized") {
+                $("body").append(`<form action="/auth" method="post" id="get-away"></form>`);
+                $("#get-away").submit();
+            }
+        });        
+    });
+
+    $(".info-item-form").on("click", function(wind) {   
+        wind.preventDefault();
+        $.post('/infoitem', function(data) {
+            $(".container").remove();
+            $(".container-chat-back").remove();
+            $(".about").remove();   
+            $(".bot-living-area").remove(); 
+            $(".container-info-back").remove();
+            $("body").append(data);
+            switchThemeIfNeed();
+        })
+        .fail(function(xhr, status, error) {
+            if (error === "Unauthorized") {
+                $("body").append(`<form action="/auth" method="post" id="get-away"></form>`);
+                $("#get-away").submit();
+            }
+        });        
+    });
+
+    $(".bot-form").on("click", function(wind) {   
+        wind.preventDefault();
+        $.post('/bot', function(data) {
+            $(".container").remove();
+            $(".container-chat-back").remove();
+            $(".about").remove();   
+            $(".bot-living-area").remove();   
+            $(".container-info-back").remove();
+            $("body").append(data);
+            switchThemeIfNeed();
+        })
+        .fail(function(xhr, status, error) {
+            if (error === "Unauthorized") {
+                $("body").append(`<form action="/auth" method="post" id="get-away"></form>`);
+                $("#get-away").submit();
+            }
+        });        
+    });    
+});
+
+function switchThemeIfNeed() {
+    let head = document.getElementsByTagName("head")[0];
+    if (document.getElementsByTagName("style")[0] !== 'undefined') {
+        $("style").remove();
+    }
+
+    let style = document.createElement("style");           
+    head.appendChild(style);
+    let sheet = style.sheet;
+    if ($("#theme-switcher").attr("checked") !== 'checked') {
+        $(".about").css("box-shadow", "inset 0 0 2em red, 0 0 1em red");
+        $(".about").css("background-color", "rgba(0, 0, 0, 0.7)");
+        $(".container-chat-back").css("box-shadow", "inset 0 0 2em red, 0 0 1em red");
+        $(".container-chat-back").css("background-color", "rgba(0, 0, 0, 0.7)");
+        $(".container-info-back").css("box-shadow", "inset 0 0 2em red, 0 0 1em red");
+        $(".container-info-back").css("background-color", "rgba(0, 0, 0, 0.7)");
+
+        // For later (auth style etc.)
+        /* $(".auth-container").css("box-shadow", "inset 0 0 2em red, 0 0 1em red");
+        $(".auth-container").css("background-color", "rgba(0, 0, 0, 0.7)");
+        $("#fail-auth-container").css("box-shadow", "inset 0 0 2em red, 0 0 1em red");
+        $("#fail-auth-container").css("background-color", "rgba(0, 0, 0, 0.7)");
+        $("#fail-reg-container").css("box-shadow", "inset 0 0 2em red, 0 0 1em red");
+        $("#fail-reg-container").css("background-color", "rgba(0, 0, 0, 0.7)");   
+        */      
+
+        sheet.insertRule("::-webkit-scrollbar {background-color: rgba(178, 0, 0, 0.6); width: 1em;}", 0);
+        sheet.insertRule(".container-chat::-webkit-scrollbar {background-color: rgba(0, 0, 0, 0);}", 0);
+        sheet.insertRule("::-webkit-scrollbar-track {background-color: none; border-radius: 1em;}", 0);
+        sheet.insertRule(".container-chat::-webkit-scrollbar-track {box-shadow: inset 0 0 0.3em rgba(178, 0, 0, 0.7), inset 0 0 2em rgba(0, 0, 0, 0.7);}", 0);
+        sheet.insertRule(".container-chat::-webkit-scrollbar-thumb:hover {background-color: maroon; box-shadow: inset 0 0 1em rgba(0, 0, 0, 1), inset 0 0 1em rgba(0, 0, 0, 1);}", 0);
+        sheet.insertRule("::-webkit-scrollbar-thumb {box-shadow: inset 0 0 0.3em rgba(178, 0, 0, 0.7), inset 0 0 2em rgba(0, 0, 0, 0.7); border-radius: 1em;}", 0);
+        sheet.insertRule("::-webkit-scrollbar-thumb:hover {box-shadow: inset 0 0 1em rgba(0, 0, 0, 1), inset 0 0 1em rgba(0, 0, 0, 1);}", 0);     
+    } else {
+        $(".about").css("box-shadow", "0 0 2em rgba(255, 0, 0, 0.8), 0 0 1em rgba(255, 0, 0, 0.8), inset 0 0 2em rgba(255, 0, 0, 0.8), inset 0 0 1em rgba(255, 0, 0, 0.8)");
+        $(".about").css("background-color", "rgba(0, 0, 120, 0.7)");
+        $(".container-chat-back").css("box-shadow", "0 0 2em rgba(255, 0, 0, 0.8), 0 0 1em rgba(255, 0, 0, 0.8), inset 0 0 2em rgba(255, 0, 0, 0.8), inset 0 0 1em rgba(255, 0, 0, 0.8)");
+        $(".container-chat-back").css("background-color", "rgba(0, 0, 120, 0.7)");
+        $(".container-info-back").css("box-shadow", "0 0 2em rgba(255, 0, 0, 0.8), 0 0 1em rgba(255, 0, 0, 0.8), inset 0 0 2em rgba(255, 0, 0, 0.8), inset 0 0 1em rgba(255, 0, 0, 0.8)");
+        $(".container-info-back").css("background-color", "rgba(0, 0, 120, 0.7)");
+
+        // For later (auth style etc.)
+        /*  $(".auth-container").css("box-shadow", "0 0 2em rgba(255, 0, 0, 0.8), 0 0 1em rgba(255, 0, 0, 0.8), inset 0 0 2em rgba(255, 0, 0, 0.8), inset 0 0 1em rgba(255, 0, 0, 0.8)");
+        $(".auth-container").css("background-color", "rgba(0, 0, 120, 0.7)");
+        $("#fail-auth-container").css("box-shadow", "0 0 2em rgba(255, 0, 0, 0.8), 0 0 1em rgba(255, 0, 0, 0.8), inset 0 0 2em rgba(255, 0, 0, 0.8), inset 0 0 1em rgba(255, 0, 0, 0.8)");
+        $("#fail-auth-container").css("background-color", "rgba(0, 0, 120, 0.7)");
+        $("#fail-reg-container").css("box-shadow", "0 0 2em rgba(255, 0, 0, 0.8), 0 0 1em rgba(255, 0, 0, 0.8), inset 0 0 2em rgba(255, 0, 0, 0.8), inset 0 0 1em rgba(255, 0, 0, 0.8)");
+        $("#fail-reg-container").css("background-color", "rgba(0, 0, 120, 0.7)");
+        */
+
+        sheet.insertRule("::-webkit-scrollbar {background-color: rgba(0, 0, 179, 0.6); width: 1em;}", 0);
+        sheet.insertRule(".container-chat::-webkit-scrollbar {background-color: rgba(0, 0, 0, 0);}", 0);
+        sheet.insertRule("::-webkit-scrollbar-track {background-color: none; border-radius: 1em;}", 0);
+        sheet.insertRule(".container-chat::-webkit-scrollbar-track {background-color: rgba(0, 0, 179, 0.6);}", 0);
+        sheet.insertRule("::-webkit-scrollbar-thumb {box-shadow: inset 0 0 1em rgba(163, 41, 179, 1), inset 0 0 1em rgba(163, 41, 122, 1); border-radius: 1em;}", 0);
+        sheet.insertRule("::-webkit-scrollbar-thumb:hover {box-shadow: inset 0 0 2em black;}", 0);                    
+    }
+}

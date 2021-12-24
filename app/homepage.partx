@@ -1,0 +1,37 @@
+<div class="container">
+	<div class="item">
+		<form action="/game" method="post" enctype="multipart/form-data" id="game-form">
+			<a href="javascript:;" class="menu-item unselectable" onclick="document.getElementById('game-form').submit();">
+				<img src="Ico/game_ico.png">
+				<p class="text" id="text-game">Игра</p>
+			</a>
+		</form>
+	</div>
+		
+	<div class="item">
+		<form method="post" class="chatroom-form" id="chatroom-form">
+			<div class="menu-item unselectable">
+				<img src="Ico/chat_ico.png">
+				<p class="text" id="text-chat">Чат</p>
+			</div>
+		</form>
+	</div>
+		
+	<div class="item">
+		<form method="post" class="about-form" id="about-form">
+			<div class="menu-item unselectable">
+				<img src="Ico/about_ico.png">
+				<p class="text" id="text-about">О проекте</p>
+			</div>
+		</form>
+	</div>
+
+	<div class="item">
+		<form method="post" class="bot-form" id="bot-form">
+			<div class="menu-item unselectable">
+				<img src="Ico/bot_ico.png">
+				<p class="text" id="text-bot">Бот</p>
+			</div>
+		</form>
+	</div>		
+</div>

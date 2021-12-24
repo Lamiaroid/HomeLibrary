@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Игра</title>
+	<link rel="stylesheet" href="style.css">	
+	<link rel="icon" href="/Arts/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/Arts/favicon.ico" type="image/x-icon">
+</head>
+<body>
+	
+	<form id="card-back-side" name="CardBackSide" method="post">
+		<ul class="menu">
+        	<li>
+        		Скин карт
+				<ul class="submenu">
+					<div class="skin-container">
+						<nav class="skin-content"><input class="card1" type="button" id="name" name="name" onclick="cardBackChanger('CardBack1')"></nav>
+						<nav class="skin-content"><input class="card2" type="button" id="name" name="name" onclick="cardBackChanger('CardBack2')"></nav>
+						<nav class="skin-content"><input class="card3" type="button" id="name" name="name" onclick="cardBackChanger('CardBack3')"></nav>
+						<nav class="skin-content"><input class="card4" type="button" id="name" name="name" onclick="cardBackChanger('CardBack4')"></nav>
+						<nav class="skin-content"><input class="card5" type="button" id="name" name="name" onclick="cardBackChanger('CardBack5')"></nav>
+						<nav class="skin-content"><input class="card6" type="button" id="name" name="name" onclick="cardBackChanger('CardBack6')"></nav>
+					</div>
+				</ul>
+			</li>
+		</ul>
+	</form>
+
+	<script src="Logic/game.js"></script>	
+
+</body>
+</html>

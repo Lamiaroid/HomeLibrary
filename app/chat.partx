@@ -1,0 +1,19 @@
+<div class="container-chat-back">
+    <script src="Scripts/interactions-with-server.js"></script>	
+    
+	<p align="center">Добро пожаловать в чат!</p>
+	<img src="Arts/apophis.png" align="right" class="unselectable">
+    <div class="container-chat">
+        <ul id="messages"></ul>
+    </div>
+
+    <div class="states-container">        
+        <p class="open-state">Всего онлайн: </p><p id="now-online">0</p>      
+        <p id="user-typing-state" class="secret-state">Кто-то печатает сообщение</p>
+    </div>         
+
+    <form id="send-message-action">
+        <input id="mes" autocomplete="off" class="send-text" type="text"><br><br>
+    </form>       
+
+</div>

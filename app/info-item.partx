@@ -1,0 +1,14 @@
+<div class="container-info-back">
+    <script src="Scripts/spa-sql-data.js"></script> 
+
+	<p align="center">База знаний</p>
+    <div class="container-info">
+    	
+    	   {DATA-SQL}
+
+        <form method="post" class="info-form">
+            <button class="container-info-button-back">Назад</button>
+        </form>
+    </div>    
+
+</div>

@@ -1,0 +1,16 @@
+<div class="bot-living-area">
+	<script src="Scripts/bot.js"></script>
+
+	<form id="bot-interaction">
+		<input id="comm" autocomplete="off">
+	</form>
+
+	<img class="bot-loading unselectable undraggable" src="/Arts/loading-ico.gif">
+	<img class="bot-loading unselectable undraggable" src="/Arts/loading-text.gif">
+
+	<div id="bot"></div>
+
+	<p id="bot-chat"></p>
+	<p id="bot-pic-sender"></p>
+		
+</div>

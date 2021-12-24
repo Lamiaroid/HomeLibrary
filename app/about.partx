@@ -1,0 +1,14 @@
+﻿<div class="about">
+	<img src="Arts/demon.png" align="left" class="unselectable">
+	<p align="center">О проекте</p>
+	<p>Это развлекательный сайт с различными функциями. Здесь вы можете общаться, сыграть в игру на память и повзаимодействовать с ботом.</p>
+	<p>Основные советы:</p>
+	<ul>
+		<li>В чате можно писать ссылки с помощью команды !link (Пример: !link example.com);</li>
+		<li>Можно отправлять эмоции с помощью однной из этих команд: !rofl, !nice, !haha, !nooo, !omg, !stfu, !lol, !love, !ok, !hmm, !kappa, !why, !dwi, !alove, !boom, !cat, !party, !sbob, !srsly, !squid, !like, !gj;</li>
+		<li>У бота можно получить полный список команд: help;</li>
+		<li>Внешний облик бота можно сменить, введя команду: change_bot bot_name; Возможные варианты bot_name: creeper, spider, cave_spider, enderman, skeleton, blaze, zombie; (Пример: change_bot creeper);</li>
+		<li>Бот может принимать только картинки с расширением .png и .jpg размером не более 4МБ;</li>
+	</ul>
+	<p align="center">2020, Все права защищены</p>	
+</div>

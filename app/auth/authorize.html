@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Авторизация</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="icon" href="/Arts/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/Arts/favicon.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/auth.js"></script>
+</head>
+<body>
+
+	<video class="bg" width="1920" height="1080" autoplay muted loop>
+		<source src="bg-anim.webm" type='video/webm; codecs="vp8, vorbis"'>			
+	</video>
+
+	<div class="auth-container">
+		
+		<br><p class="auth-text">Пожалуйста, введите свой логин и пароль</p>
+		<img align="right" src="/Arts/cheshiria.png" class="unselectable">
+		<form id="auth-form">
+			<p class="auth-text">Логин:</p>
+            <input class="auth-info" autocomplete="off" type="text" name="login" required pattern="^[a-zA-Z0-9_]{6,20}$"><br>
+
+			<p class="auth-text">Пароль:</p>
+            <input class="auth-info" autocomplete="off" type="password" name="password" required pattern="^[a-zA-Z0-9_]{3,20}$"><br><br>
+
+            <input class="auth-button" id="auth-submit" type="submit" value="Готово!">
+		</form>
+	
+		<form action="/registration" method="post">
+			<p class="auth-text" id="auth-create-text">Нет аккаунта?</p>
+			<button class="auth-button" id="auth-create">Создать</button>
+		</form>
+		
+	</div>
+
+	<div id="fail-auth-container">
+		<p align="center"></p>
+	</div>
+	
+</body>
+</html>

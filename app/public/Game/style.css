@@ -1,0 +1,443 @@
+html {
+	cursor: url("Image/cursor.png"), auto;
+}
+
+body {
+	margin: 0px;
+	background-image: url("Image/bg_game.jpg");
+	background-attachment: fixed;
+	background-color: black;
+}
+
+button {
+	cursor: url("Image/pointer.png"), auto;
+}
+
+input {
+	cursor: url("Image/edit.png"), auto;
+}
+
+::-webkit-scrollbar {
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 1em;
+}
+
+::-webkit-scrollbar-track {
+	background-color: none;
+	border-radius: 1em;
+}
+
+::-webkit-scrollbar-thumb {
+	box-shadow: inset 0 0 1em red, 0 0 1em red;
+	border-radius: 1em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	box-shadow: inset 0 0 1em black, inset 0 0 0.5em red, 0 0 1em red;
+}
+
+.content-container {
+	margin-left: 30%;
+	margin-right: 30%;
+	margin-top: 7%;
+	background-color: rgba(0, 0, 0, 0.8);
+	border-radius: 20px;
+	box-shadow: inset 0 0 2em gold, 0 0 1em red, 0 0 10em green;
+}
+
+.content {
+	padding: 10%;
+	color: gold;
+	text-shadow: 0 0 2em red, 0 0 2em red, 0 0 2em red;
+}
+
+.content-container .content li {
+	font-size: 24px;
+}
+
+.main-page-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-right: 10%;
+}
+
+.button {
+	outline: none;
+	margin-right: 50%;
+	width: 120px;
+	height: 60px;
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, 0.7);
+	box-shadow: 0 0 2em red;
+	transition: 0.7s;
+	border-style: none;
+	color: orange;
+	font-size: 23px;
+	text-shadow: 0 0 2em red, 0 0 2em red, 0 0 2em red;
+	margin-left: 40%;
+}
+
+.button:hover {
+	background-color: maroon;
+	transform: rotate(720deg);
+	color: silver;
+}
+
+#oh-no-go-back {
+	width: 6.2em;
+}
+
+.user-info {
+	outline: none;
+	margin-top: 0;
+	margin-bottom: 3%;
+	margin-left: 22%;
+	padding-left: 5%;
+	padding-right: 5%;
+	height: 60px;
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, 0.7);
+	box-shadow: 0 0 2em red;
+	transition: 1s;
+	border-style: none;
+	color: orange;
+	font-size: 23px;
+	text-shadow: 0 0 1em red;
+}
+
+.user-info:focus {
+	background-color: rgba(255, 0, 0, 0.7);
+	box-shadow: inset 0 0 2em black, 0 0 2em red;
+	text-shadow: 0 0 1em black;
+}
+
+.difficulty-container {
+	display: flex;
+	margin-left: 10%;
+}
+
+.difficulty-block {
+	flex-basis: 33%;
+}
+
+.difficulty-button {
+	cursor: url("Image/pointer.png"), auto;
+	padding: 0;
+	margin: 0;
+	width: 80%;
+}
+
+#card-design {
+	margin-top: 50px;
+	margin-bottom: 30px;
+	width: 240px;
+	height: 360px;
+	transition: 1.0s;
+	border-radius: 20px;
+	box-shadow: 0 0 1em red, 0 0 2em maroon;
+}
+
+#card-design-mini {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 190px;
+	height: 280px;
+	transition: 1.0s;
+	border-radius: 20px;
+	box-shadow: 0 0 1em red, 0 0 2em maroon;
+}
+
+#card-design-mini-mini {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 180px;
+	height: 280px;
+	transition: 1.0s;
+	border-radius: 20px;
+	box-shadow: 0 0 1em red, 0 0 2em maroon;
+}
+
+#equal-cards {
+	width: 0px;
+	height: 0px;
+	transition: 0.7s;
+}
+
+#action {
+	margin-top: 50px;
+	margin-bottom: 30px;	
+	width: 0px;
+	height: 360px;
+	transition: 1.0s;
+}
+
+#action-mini {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 0px;
+	height: 280px;
+	transition: 1.0s;
+}
+
+#action-mini-mini {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 0px;
+	height: 280px;
+	transition: 1.0s;
+}
+
+#flex-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 10px;
+	padding-left: 1%;
+	margin-left: 1%;
+	margin-right: 1%;
+	border-radius: 20px;
+	background-color: rgba(0, 0, 0, 0.8);
+	/*Подключение уменьшит плавность переворота картинок(на слабых пк), но подключит свечение заднего фона в игре*/
+	box-shadow: inset 0 0 2em gold, 0 0 1em red, 0 0 10em green;
+	/*************************************************************/
+	transition: 0.5s;
+}
+
+#flex-item {
+	flex-basis: 16%;
+	margin-left: 3.6%;
+}
+
+#flex-item-mini {
+	flex-basis: 14.2%;
+	margin-left: 2.45%;
+}
+
+#flex-item-mini-mini {
+	flex-basis: 11.5%;
+	margin-left: 1%;
+}
+
+#dissolve {
+	height: 0px;
+	transition: 1s;
+}
+
+#timer-state1 {
+	font-size: 20px;
+	padding-left: 0.5%;
+	margin-left: 94.2%;
+	margin-right: 3%;
+	background-color: red;
+	font-color: maroon;
+	text-shadow: 0 0 1em red;
+	background-color: rgba(255, 100, 201, 0.7);
+	border-radius: 20px;
+	box-shadow: inset 0 0 2em gold, 0 0 1em red;
+	transition: 0.5s;
+}
+
+#timer-state2 {
+	font-size: 20px;
+	padding-left: 0.5%;
+	margin-left: 94.2%;
+	margin-right: 3%;
+	background-color: red;
+	color: maroon;
+	text-shadow: 0 0 1em red;
+	background-color: rgba(255, 100, 201, 0.7);
+	border-radius: 20px;
+	box-shadow: inset 0 0 1em red, 0 0 2em gold;
+	transition: 0.5s;
+}
+
+.card1 {
+	background: url("Cards/CardBack1.jpg") no-repeat;
+	background-size: contain;
+	margin-left: -100%;
+    width: 40px;
+    height: 58px;
+    border: none;
+}
+
+.card2 {
+	background: url("Cards/CardBack2.jpg") no-repeat;
+	background-size: contain;
+	margin-left: -97%;
+    width: 42px;
+    height: 58px;
+    border: none;
+}
+
+.card3 {
+	background: url("Cards/CardBack3.jpg") no-repeat;
+	background-size: contain;
+	margin-left: -95%;
+    width: 44px;
+    height: 58px;
+    border: none;
+}
+
+.card4 {
+	background: url("Cards/CardBack4.jpg") no-repeat;
+	background-size: contain;
+	margin-left: -116%;
+    width: 37px;
+    height: 58px;
+    border: none;
+}
+
+.card5 {
+	background: url("Cards/CardBack5.jpg") no-repeat;
+	background-size: contain;
+	margin-left: -93%;
+    width: 47px;
+    height: 58px;
+    border: none;
+}
+
+.card6 {
+	background: url("Cards/CardBack6.jpg") no-repeat;
+	background-size: contain;
+	margin-left: -108%;
+    width: 42px;
+    height: 58px;
+    border: none;
+}
+
+.menu {
+	position: absolute;
+	font-size: 20px;
+	padding-left: 0.5%;
+	margin-left: 3%;
+	margin-top: 0;
+	width: 95px;
+	color: maroon;
+	text-shadow: 0 0 1em red;
+	background-color: rgba(255, 100, 201, 0.7);
+	border-radius: 20px;
+	box-shadow: inset 0 0 2em gold, 0 0 1em red;
+	list-style: none;
+}
+
+ul.submenu {
+	background-color: red;
+	box-shadow: inset 0 0 2em gold, 0 0 1em red, 0 0 5em green;
+	position: absolute;
+	height: 58px;
+	width: 200px;
+}
+
+.menu .submenu {
+	display: none;
+}
+
+.menu > li:hover .submenu {
+	margin-left: 0.6%;
+	display: flex;
+}
+
+.skin-container {
+	display: flex;
+}
+
+.skin-content {
+	flex-basis: 25%;
+}
+
+#content-container-win {
+	display: flex;
+	margin-left: 30%;
+	margin-right: 30%;
+	margin-top: 10%;
+	background-color: rgba(0, 0, 0, 0.8);
+	border-radius: 20px;
+	justify-content: center;
+	align-items: center;
+	box-shadow: inset 0 0 2em gold, 0 0 1em red, 0 0 10em green;
+}
+
+#content-win {
+	padding: 10%;
+	color: gold;
+	text-shadow: 0 0 2em red, 0 0 2em red, 0 0 2em red;
+}
+
+#records-container {
+	display: flex;
+	margin-left: 30%;
+	margin-right: 30%;
+	margin-top: 3%;
+	background-color: rgba(0, 0, 0, 0.8);
+	border-radius: 20px;
+	justify-content: center;
+	align-items: center;
+	box-shadow: inset 0 0 2em gold, 0 0 1em red, 0 0 10em green;
+}
+
+#records-content {
+	padding: 7%;
+	color: gold;
+	text-shadow: 0 0 2em red, 0 0 2em red, 0 0 2em red;
+}
+
+#table {
+	border-color: gold;
+	box-shadow: inset 0 0 2em gold, 0 0 5em red, 0 0 10em green;
+	border-spacing: 0;
+}
+
+#records-button {
+	outline: none;
+	height: 60px;
+	width: 100px;
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, 0.7);
+	box-shadow: 0 0 2em red;
+	transition: 0.7s;
+	border-style: none;
+	color: orange;
+	font-size: 23px;
+	text-shadow: 0 0 2em red, 0 0 2em red, 0 0 2em red;
+	margin-left: 43%;
+	margin-top: 3%;
+}
+
+#records-button:hover {
+	background-color: maroon;
+	transform: rotate(720deg);
+	color: silver;
+}
+
+th {
+	padding: 30px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 20px;
+}
+
+.content-container li::before {
+	content: counter(li); 
+	color: gold;
+  	display: inline-block; 
+  	width: 1em;
+  	margin-left: -1em;
+  	text-shadow: 0 0 2em red, 0 0 2em red, 0 0 2em red, 0 0 2em red, 0 0 2em red;
+}
+
+.content-container li {
+	counter-increment: li;
+}
+
+.content-container ol {
+	list-style: none;
+}
+
+#table-name {
+	margin: 0;
+	margin-bottom: 2%; 
+	font-size: 20px;
+	color: gold;
+	text-shadow: 0 0 2em red, 0 0 2em red, 0 0 2em red;
+}
